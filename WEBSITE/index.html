@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <img class="logp"  src="logo.png" alt="School Logo" style="width:80px ;height: 80px; text-align: center;">
+  <title>CPEC Saint Babeth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="departments.html">Departments</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="staff.html">Staff</a>
+  <a href="contact.html">Contact</a>
+</nav>
+</header>
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-text">
+    <marquee><h1>WELLCOME TO CPEC SAINT BABETH(Ordinary Level & Technicol Secondary School)</h1></marquee>
+    <p>Quality Education & Practical Skills for a Better Future</p>
+    <button>Apply Now</button>
+  </div>
+
+  <div class="hero-img">
+    <img src="images/school1.jpg"id="school">
+<section class="stats">
+
+  <section class="stats">
+
+  <div class="stat-box">
+    <h2 class="counter" data-target="5000">0</h2>
+    <p>Active Students</p>
+  </div>
+
+  <div class="stat-box">
+    <h2 class="counter" data-target="400">0</h2>
+    <p>Expert Staff</p>
+  </div>
+
+  <div class="stat-box">
+    <h2 class="counter" data-target="1500">0</h2>
+    <p>Industry Partners</p>
+  </div>
+
+</section>
+  </div>
+
+</section>
+
+<!-- ABOUT SCHOOL -->
+<section class="section">
+
+  <h2>About Our School</h2>
+
+  <p>
+    CPEC Saint Babeth is a professional technical school offering both academic and practical skills
+    to prepare students for the modern job market.
+  </p>
+
+</section>
+
+<!-- LEVELS -->
+<section class="section">
+
+  <h2>Ordinary Level Classes</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="S1.jpg">
+      <h3>S1</h3>
+    </div>
+
+    <div class="card">
+      <img src="S2.jpg">
+      <h3>S2</h3>
+    </div>
+
+    <div class="card">
+      <img src="S3.jpg">
+      <h3>S3</h3>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DEPARTMENTS -->
+<section class="section">
+
+  <h2>Departments</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="computer.jpg">
+      <h3>Software Development</h3>
+      <p>Programming, Web & App Development</p>
+    </div>
+
+    <div class="card">
+      <img src=camera.jpg>
+      <h3>Multimedia</h3>
+      <p>Design, Video Editing, Creativity</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WORKSHOPS -->
+<section class="section dark">
+
+  <h2>Practical Skill Workshops</h2>
+
+  <div class="grid">
+
+    <div class="card dark-card">
+      <img src="sodlab.png">
+      <h3>Software Development Workshop</h3>
+      <p>Hands-on coding & real projects</p>
+    </div>
+
+    <div class="card dark-card">
+      <img src=mult.jpg>
+      <h3>Multimedia Workshop</h3>
+      <p>Design, video production & creativity</p>
+    </div>
+
+  </div>
+<script>
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+  counter.innerText = '0';
+
+  const updateCounter = () => {
+
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
+
+    const increment = target / 100;
+
+    if(current < target){
+
+      counter.innerText = Math.ceil(current + increment);
+
+      setTimeout(updateCounter, 30);
+
+    } else {
+
+      counter.innerText = target + "+";
+
+    }
+
+  };
+
+  updateCounter();
+
+});
+
+</script>
